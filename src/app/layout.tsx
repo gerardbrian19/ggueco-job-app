@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ggueco-job-app.vercel.app/"),
   title: "Job Board - Find Your Dream Job",
   description:
     "Discover top job opportunities on our modern job board application.",
