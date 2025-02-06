@@ -15,10 +15,10 @@ export default function JobFilterList({
   if (!selectedTags.length) return null;
 
   return (
-    <div className="filter-container">
+    <div className="animate__animated animate__fadeIn filter-container">
       <ul className="filter-list">
         {selectedTags.map((tag) => (
-          <li key={tag} className="filter">
+          <li key={tag} className="animate__animated animate__fadeInRight filter">
             <span>{tag}</span>
             <button className="remove-filter" onClick={() => onTagClick(tag)}>
               ×

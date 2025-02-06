@@ -13,9 +13,14 @@ export default function JobCardList({
 }: Readonly<JobCardListProps>) {
   return (
     <ul className="card-list-container">
-      {jobs.map((job) => (
+      {jobs.map((job, index) => (
         <li key={job.id}>
-          <div className={`card-container ${job.featured ? "featured" : ""}`}>
+          <div
+            className={`animate__animated animate__fadeIn card-container ${
+              job.featured ? "featured" : ""
+            }`}
+            style={{ animationDelay: `${index * 200}ms` }}
+          >
             <img className="logo" src={job.logo} alt={`${job.company} logo`} />
             <div className="info">
               <p className="title">
