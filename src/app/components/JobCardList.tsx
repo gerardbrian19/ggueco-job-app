@@ -1,5 +1,6 @@
 import React from "react";
 import { Job } from "../interface/IJobs";
+import "../styles/job-card.css";
 
 interface JobCardListProps {
   jobs: Job[];

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.css";
 
@@ -13,28 +13,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Next.js App",
+  title: "Job Board - Find Your Dream Job",
   description:
-    "A modern Next.js application with a structured layout and optimized typography.",
-  keywords: "Next.js, React, TypeScript, Frontend, Web Development",
-  authors: [{ name: "Your Name", url: "https://yourwebsite.com" }],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+    "Discover top job opportunities on our modern job board application.",
+  keywords: "jobs, job board, careers, hiring, employment, work, recruitment",
+  authors: [
+    { name: "Gerard Gueco", url: "https://gerard-gueco-dev.vercel.app/" },
+  ],
   openGraph: {
-    title: "My Next.js App",
+    title: "Job Board - Find Your Dream Job",
     description:
-      "A modern Next.js application with a structured layout and optimized typography.",
-    url: "https://yourwebsite.com",
-    siteName: "My Next.js App",
+      "Discover top job opportunities on our modern job board application.",
+    url: "https://ggueco-job-app.vercel.app/",
+    siteName: "Job Board",
     type: "website",
     images: [
       {
-        url: "https://yourwebsite.com/og-image.jpg",
+        url: "/static/images/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "My Next.js App Open Graph Image",
+        alt: "Job Board Open Graph Image",
       },
     ],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
@@ -45,7 +52,11 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#ffffff" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/static/images/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}

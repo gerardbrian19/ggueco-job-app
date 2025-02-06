@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/job-filter.css";
 
 interface FilterListProps {
   selectedTags: string[];
@@ -14,7 +15,7 @@ export default function JobFilterList({
   if (!selectedTags.length) return null;
 
   return (
-    <div className="filter-bar-container">
+    <div className="filter-container">
       <ul className="filter-list">
         {selectedTags.map((tag) => (
           <li key={tag} className="filter">
