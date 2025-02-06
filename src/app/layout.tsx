@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/static/images/favicon.ico",
+        url: "https://ggueco-job-app.vercel.app/static/images/favicon.ico",
         width: 1200,
         height: 630,
         alt: "Job Board Open Graph Image",
